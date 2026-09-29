@@ -1,0 +1,9 @@
+#!name = 🛰 Ytoo 机场考古工具箱
+#!desc = 节点服务器指纹 → FOFA/Quake 检索串一键生成 · 订阅端点验证 · 证书域名族 · 43.134.88.243 复活监视。安装后 Safari 打开 http://ytoolab.local/ 使用(明文 http, 无需 MITM 证书)
+#!author = Seagull
+#!date = 2026-09-29
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Radar.png
+
+[Script]
+YtooLab = type=http-request, pattern=^http:\/\/ytoolab\.(local|ytoo)\/, script-path=https://raw.githubusercontent.com/Bejamin-ops/Loon-Lab/main/ytoolab.js, timeout=90, tag=ytooLab, enabled=true
+YtooWatch = type=cron, cronexpr="*/30 * * * *", script-path=https://raw.githubusercontent.com/Bejamin-ops/Loon-Lab/main/ytoowatch.js, tag=ytooWatch, enabled=true
